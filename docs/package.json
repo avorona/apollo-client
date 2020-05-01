@@ -1,14 +1,18 @@
 {
   "scripts": {
     "start": "gatsby develop --prefix-paths",
-    "types": "cd ../packages/apollo-client && typedoc --json ../../docs/docs.json --ignoreCompilerErrors ./src/index.ts"
+    "types": "cd ../packages/apollo-client && typedoc --json ../../docs/docs.json --ignoreCompilerErrors ./src/index.ts",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "gatsby": "^2.2.6",
-    "gatsby-theme-apollo-docs": "^0.2.41"
+    "gatsby-theme-apollo-docs": "^0.2.41",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "typedoc": "^0.14.2",
     "typescript": "^3.3.4000"
-  }
+  },
+  "snyk": true
 }
